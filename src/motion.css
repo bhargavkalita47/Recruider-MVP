@@ -1,0 +1,92 @@
+/* Movement stays brief and uses the existing brand colors. */
+@media (prefers-reduced-motion: no-preference) {
+  .motion-reveal {
+    transition: opacity 580ms cubic-bezier(.2,.7,.2,1),
+      transform 580ms cubic-bezier(.2,.7,.2,1);
+    transition-delay: var(--reveal-delay, 0ms);
+  }
+  .motion-pending { opacity: 0; transform: translate3d(0,18px,0); }
+  .step-card:nth-child(2) { --reveal-delay: 75ms; }
+  .step-card:nth-child(3) { --reveal-delay: 150ms; }
+
+  .hero-copy { animation: motion-rise 560ms cubic-bezier(.2,.7,.2,1) both; }
+  .hero-art { animation: motion-fade 650ms ease-out 90ms both; }
+  .access-page .access-content { animation: motion-rise 420ms cubic-bezier(.2,.7,.2,1) both; }
+  .app-shell .page-head { animation: motion-rise 370ms cubic-bezier(.2,.7,.2,1) both; }
+  .app-shell .main > div { animation: motion-fade 260ms ease-out both; }
+  .modal-overlay { animation: motion-fade 180ms ease-out both; }
+  .modal { animation: motion-pop 260ms cubic-bezier(.2,.7,.2,1) both; }
+  .faq-list details[open] p { animation: motion-rise 240ms ease-out both; }
+
+  .marketing-button,
+  .access-submit,
+  .account-type button,
+  .btn,
+  .swipe-btn,
+  .nav-item,
+  .tabbar button,
+  .list-row,
+  .match-row,
+  .faq-plus,
+  .marketing-nav button,
+  .access-field input,
+  .access-field select,
+  .access-field textarea,
+  .field input,
+  .field select,
+  .field textarea {
+    transition: transform 190ms cubic-bezier(.2,.7,.2,1),
+      background-color 190ms ease,
+      border-color 190ms ease,
+      color 190ms ease,
+      box-shadow 190ms ease;
+  }
+  .marketing-button svg,
+  .access-submit svg,
+  .closing-secondary svg { transition: transform 190ms ease; }
+
+  @media (hover: hover) {
+    .marketing-button:hover svg,
+    .access-submit:hover svg,
+    .closing-secondary:hover svg { transform: translateX(3px); }
+    .access-submit:not(:disabled):hover,
+    .btn:not(:disabled):hover,
+    .swipe-btn:not(:disabled):hover { transform: translateY(-2px); }
+    .account-type button:not(:disabled):hover { transform: translateY(-2px); border-color: var(--amber); }
+    .nav-item:hover { transform: translateX(3px); }
+    .list-row:hover { transform: translateY(-2px); }
+    .match-row:hover { transform: translateX(2px); }
+    .tabbar button:not(.active):hover { background: var(--ink-softer); color: var(--paper); }
+    .faq-list summary:hover .faq-plus { transform: rotate(90deg); }
+    .faq-list details[open] summary:hover .faq-plus { transform: rotate(45deg); }
+  }
+  .marketing-button:not(:disabled):active,
+  .access-submit:not(:disabled):active,
+  .btn:not(:disabled):active,
+  .swipe-btn:not(:disabled):active,
+  .account-type button:not(:disabled):active { transform: scale(.98); }
+  .access-field input:focus,
+  .access-field select:focus,
+  .access-field textarea:focus,
+  .field input:focus,
+  .field select:focus,
+  .field textarea:focus { box-shadow: 0 0 0 3px var(--amber-soft); }
+}
+
+@keyframes motion-rise {
+  from { opacity: 0; transform: translate3d(0,12px,0); }
+  to { opacity: 1; transform: translate3d(0,0,0); }
+}
+@keyframes motion-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes motion-pop {
+  from { opacity: 0; transform: translate3d(0,8px,0) scale(.985); }
+  to { opacity: 1; transform: translate3d(0,0,0) scale(1); }
+}
+
+@media (max-width: 700px) and (prefers-reduced-motion: no-preference) {
+  .motion-pending { transform: translate3d(0,12px,0); }
+}
+

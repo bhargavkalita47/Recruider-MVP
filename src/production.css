@@ -1,0 +1,62 @@
+/* Shared theme and workspace styles are in styles.css. These additions cover real forms, accessibility and narrow screens. */
+fieldset{border:0;padding:0;margin:0;min-width:0}
+button,input,select,textarea{font:inherit}
+button:disabled{opacity:.5;cursor:not-allowed}
+button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:2px solid var(--amber);outline-offset:3px}
+input,textarea,select{max-width:100%}
+p,div,span,h3,h4{overflow-wrap:anywhere}
+.auth-title{font-size:22px;margin:10px 0 20px}
+.auth-box .eyebrow{margin-bottom:10px}
+.search-row input,.chat-input input{min-width:0;background:var(--ink-softer);border:1px solid var(--line);color:var(--paper);border-radius:10px;padding:11px 13px;font-size:14px;outline:none}
+.search-row{width:100%}
+.search-row input:focus,.chat-input input:focus{border-color:var(--amber)}
+.row-button{font:inherit;text-align:left;color:inherit;width:100%;cursor:pointer}
+.company-card.row-button{width:220px}
+.lr-meta{display:block}
+.row-flex{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.space-between{display:flex;justify-content:space-between;gap:14px;align-items:flex-start;flex-wrap:wrap}
+.muted{color:var(--graphite);font-size:13px;line-height:1.6}
+.preserve{white-space:pre-wrap;overflow-wrap:anywhere}
+.spaced{margin-top:16px;margin-bottom:12px}
+.form-panel{max-width:560px}
+.wide-form{max-width:720px}
+.filter-field{max-width:260px}
+.submission-box{background:var(--ink-softer);border:1px solid var(--line);border-radius:12px;padding:16px;font-size:13px;line-height:1.6}
+.card-link{background:none;border:0;font-size:12px;color:var(--ink-softer);text-align:left;padding:10px 0;margin-top:8px;font-weight:600}
+.card-link:hover{text-decoration:underline}
+.card-link:focus-visible,.modal button:focus-visible{outline-color:var(--ink)}
+.deck-hint{text-align:center}
+.dossier-card{touch-action:pan-y}
+.dossier-card .empty-note{padding:6px 0;font-size:11px;color:var(--ink-softer)}
+.dossier-card.behind{pointer-events:none}
+.table-scroll{overflow-x:auto}
+.data-table td{min-width:80px;max-width:280px;overflow-wrap:anywhere}
+.modal .sub-text,.modal .muted,.modal .empty-note{color:var(--ink-softer)}
+.modal .badge-chip{color:var(--ink-softer)}
+.modal .row-button{color:var(--paper)}
+.modal .btn:not(.btn-primary):not(.btn-danger){color:var(--ink-softer)}
+.modal .btn-danger{color:var(--ink)}
+.modal .btn-primary{color:var(--ink)}
+.modal-dark{background:var(--ink-soft);color:var(--paper)}
+.modal-dark h3{color:var(--paper)}
+.modal .card-desc{overflow:visible}
+.chat-panel{min-height:400px;min-width:0}
+.match-row.selected{border-color:var(--amber)}
+.connection-status{font:10px var(--font-m);color:var(--graphite);display:block;margin-top:8px}
+.chat-error{padding:8px 16px}
+.bubble{flex-shrink:0}
+.inline-error{color:var(--coral);font-size:13px;line-height:1.6}
+.inline-success{color:var(--green);font-size:13px;line-height:1.6}
+.toast{display:flex;gap:14px;align-items:center;max-width:calc(100vw - 28px);width:max-content;border-radius:16px}
+.toast-error{background:var(--coral);color:var(--ink)}
+.toast button{border:0;background:none;color:inherit;font-size:20px}
+.save-status{position:fixed;right:20px;bottom:20px;border:1px solid var(--line);background:var(--ink-soft);padding:8px 14px;border-radius:8px;font:11px var(--font-m);z-index:90}
+.demo-banner{background:var(--lavender);color:var(--ink);padding:7px 16px;text-align:center;font:11px var(--font-m)}
+.setup-notice{font-size:12px;color:var(--graphite);max-width:600px;line-height:1.6;text-align:center;margin-top:26px;z-index:1}
+.sidebar nav{flex:1}
+.side-user>div:last-child{min-width:0}
+@media(max-width:1100px){.main{padding-left:24px;padding-right:24px}.list-row{flex-wrap:wrap}.list-row .lr-main{min-width:120px}.two-col .list-row .btn{margin-left:auto}}
+@media(max-width:860px){.sidebar{display:grid;grid-template-columns:1fr auto;overflow:visible;gap:10px}.sidebar .brand{padding:0}.side-user{display:none}.sidebar nav{grid-column:1/-1;grid-row:2;display:flex;overflow-x:auto;gap:4px;padding-bottom:4px}.nav-item{width:auto;flex-shrink:0;margin:0}.sidebar-foot{grid-column:2;grid-row:1}.sidebar-foot .btn{font-size:11px;padding:6px}.main{padding:22px 16px 60px}.chat-shell{height:auto;min-height:600px}.chat-list{max-height:200px}.chat-panel{height:520px;flex:auto}.panel{padding:20px}.modal-overlay{padding:12px}.modal{padding:24px 20px}.deck{max-width:420px}.stat-box{flex:1;min-width:130px}.bubble{max-width:86%}}
+@media(max-width:420px){.landing{padding:36px 16px}.role-card{width:100%;max-width:340px}.role-grid{width:100%}.auth-box{padding:26px 20px}.tabbar{max-width:100%}.tabbar button{font-size:12px;padding:8px 12px}.dossier-card{padding:22px 18px}.swipe-btn{font-size:12px;padding:11px 7px}.deck{height:525px}.company-card.row-button{width:100%}.chat-input{padding:12px;gap:7px}.chat-input .btn{padding:10px}.stamp{right:12px;top:14px}.list-row{padding:14px;gap:10px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
